@@ -14,13 +14,13 @@ module.exports = {
      * }], {});
     */
     await queryInterface.bulkInsert('Users', [
-      {
-        firstName: 'Trang',
-        lastName: 'Huyen',
-        email: 'trangg122@gmail.com',
-        password: bcrypt.hashSync('secret', 10),
-        gender: 'female'
-      }
+        {
+          firstName: 'Trang',
+          lastName: 'Huyen',
+          email: 'trangg122@gmail.com',
+          password: bcrypt.hashSync('secret', 10),
+          gender: 'female'
+        }
     ])
   },
 
