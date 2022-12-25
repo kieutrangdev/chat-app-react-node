@@ -2,6 +2,7 @@ const User = require("../models").User;
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const config = require('../config/app')
+const {validationResult} = require('express-validator')
 exports.login = async (req, res) => {
   const { email, password } = req.body;
   try {
@@ -33,6 +34,8 @@ exports.login = async (req, res) => {
 };
 
 exports.register = async (req, res) => {
+ 
+   
   try {
     const user = await User.create(req.body)
 
